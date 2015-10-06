@@ -12,7 +12,7 @@ class LogUserController extends Controller
   {
     ...
   
-        // IP si internet partagé
+        	// IP si internet partagé
 		if (isset($_SERVER['HTTP_CLIENT_IP'])) {
 			$ip=$_SERVER['HTTP_CLIENT_IP'];
 		}
@@ -33,7 +33,7 @@ class LogUserController extends Controller
 		// L'adresse de la page (si elle existe) qui a conduit le client à la page courante.
 		$uri=$_SERVER['REQUEST_URI'];
         
-        // if pour ne pas enregistrer les du réseau local..
+        	// if pour ne pas enregistrer les du réseau local..
 		if ($ip!='192.168.1.254'){
 			//INSERTION DE L'IP DANS DB MYSQL
 			$loguser = new Loguser();
