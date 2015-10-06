@@ -16,7 +16,7 @@
 				<div style="padding:10px 0 10px 0;">
 					{% for page in pages %}
 						{% if log.page==page.id %}
-						<div style="color:#58FA58"><b>Page :</b> {{ page.pagetitle }}</div>
+						  <div style="color:#58FA58"><b>Page :</b> {{ page.pagetitle }}</div>
 						{% endif %}
 					{% endfor %}
 						{% if log.page=='0' %}
@@ -30,7 +30,7 @@
 						{% endif %}
 					{% for article in articles %}
 						{% if log.article==article.id %}
-						<div style="color:#58ACFA"><b>Article :</b> {{ article.articletitle }}</div>
+						  <div style="color:#58ACFA"><b>Article :</b> {{ article.articletitle }}</div>
 						{% endif %}
 					{% endfor %}
 				</div>
