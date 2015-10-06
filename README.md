@@ -400,4 +400,17 @@ class AdminLogUserController extends Controller
 {% endblock %}
 ```
 
+<br />
+
+<b>page.html.twig</b>
+
+```php
+...
+
+{% block body %}
+
+...
+
+{% endblock %}
+```
 
