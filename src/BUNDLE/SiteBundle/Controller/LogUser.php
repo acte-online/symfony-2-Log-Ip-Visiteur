@@ -50,7 +50,7 @@ class LogUserController extends Controller
 	    $em->flush();
 	}
 	
-	return $this->render('ACTESiteBundle:Page:page.html.twig', array(
+	return $this->render('BUNDLESiteBundle:Page:page.html.twig', array(
 	'ip' => $ip,
 	'useragent' => $useragent,
 	'querystring' => $querystring,
