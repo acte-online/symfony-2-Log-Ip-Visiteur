@@ -1,2 +1,3 @@
 #symfony-2-Log-Ip-Visiteur
-Enregistrement des infos visiteurs
+Enregistrement dans DB des infos visiteurs
+
