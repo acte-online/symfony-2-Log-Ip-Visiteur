@@ -356,7 +356,7 @@ class AdminLogUserController extends Controller
 
 <b>AdminLogUser.html.twig</b>
 
-![alt text](web/images/AdminLogUser.html.twig.png "Screenshot")
+![alt text](https://github.com/acte-online/symfony-2-Log-Ip-Visiteur/blob/master/web/images/AdminLogUser.html.twig.png "Screenshot")
 
 ```php
 ...
