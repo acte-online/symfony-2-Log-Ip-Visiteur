@@ -10,9 +10,13 @@ use BUNDLE\SiteBundle\Entity\Article;
 
 class PageController extends Controller
 {
-  public function pageAction()
+  public function pageAction($id, Request $request)
   {
     	...
+    	
+    	// Liste des pages
+	$em = $this->getDoctrine()->getManager();
+	$pages = $em->getRepository('BUNDLESiteBundle:Page')->findAll();
   
 	// IP si internet partagé
 	if (isset($_SERVER['HTTP_CLIENT_IP'])) {
@@ -41,7 +45,7 @@ class PageController extends Controller
 		$loguser = new Loguser();
 	    $loguser->setIp($ip);
 	    $loguser->setDateinsert(new \DateTime("now"));
-	    $loguser->setPage('/Nom-de-la-page');
+	    $loguser->setPage($uri);
 	    $loguser->setUseragent($useragent);
 	    $loguser->setQuerystring($querystring);
 	    $loguser->setUri($uri);
@@ -53,6 +57,8 @@ class PageController extends Controller
 	}
 	
 	return $this->render('BUNDLESiteBundle:Page:page.html.twig', array(
+		'pages' => pages,
+		'id' => $id,
 		'ip' => $ip,
 		'useragent' => $useragent,
 		'querystring' => $querystring,
