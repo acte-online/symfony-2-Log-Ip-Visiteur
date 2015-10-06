@@ -84,6 +84,8 @@ namespace BUNDLE\SiteBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use BUNDLE\SiteBundle\Entity\Loguser;
+use BUNDLE\SiteBundle\Entity\Page;
+use BUNDLE\SiteBundle\Entity\Article;
 class AdminLogUserController extends Controller
 {
     public function AdminLogUserAction()
