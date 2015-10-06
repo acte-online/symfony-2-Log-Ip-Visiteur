@@ -53,15 +53,15 @@ class LogUserController extends Controller
 	}
 	
 	return $this->render('BUNDLESiteBundle:Page:page.html.twig', array(
-	'ip' => $ip,
-	'useragent' => $useragent,
-	'querystring' => $querystring,
+		'ip' => $ip,
+		'useragent' => $useragent,
+		'querystring' => $querystring,
 	));
   
     	...
   }
   
-  public function adminlogAction(){
+  public function loguserAction(){
   	
   	...
   	
@@ -82,11 +82,11 @@ class LogUserController extends Controller
 	  ->findAll();
 	
   	//VUE DE LA PAGE
-  	return $this->render('BUNDLESiteBundle:AdministartionPage:Log/loguser.html.twig', array(
-  	'logs' => $logs,
+  	return $this->render('BUNDLESiteBundle:AdministrationPage:Log/loguser.html.twig', array(
+  		'logs' => $logs,
 		'pages' => $pages,
 		'articles' => $articles,
-  		));
+  	));
   	...
   }
 }
