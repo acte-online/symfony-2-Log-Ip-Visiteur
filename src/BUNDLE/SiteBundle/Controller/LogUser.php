@@ -61,23 +61,25 @@ class LogUserController extends Controller
     	...
   }
   
-  public function adminlogAction()
-	{
-		$em = $this->getDoctrine()->getManager();
-		$logs = $em
-			->getRepository('ACTESiteBundle:Loguser')
-			->findBy(array(), array('id' => 'DESC'));
-		;
-		
-		$em = $this->getDoctrine()->getManager();
-		$pages = $em
-		  ->getRepository('ACTESiteBundle:Page')
-		  ->findAll();
-		
-		$em = $this->getDoctrine()->getManager();
-		$articles = $em
-		  ->getRepository('ACTESiteBundle:Article')
-		  ->findAll();
+  public function adminlogAction(){
+  	
+  	...
+  	
+	$em = $this->getDoctrine()->getManager();
+	$logs = $em
+		->getRepository('ACTESiteBundle:Loguser')
+		->findBy(array(), array('id' => 'DESC'));
+	;
+	
+	$em = $this->getDoctrine()->getManager();
+	$pages = $em
+	  ->getRepository('ACTESiteBundle:Page')
+	  ->findAll();
+	
+	$em = $this->getDoctrine()->getManager();
+	$articles = $em
+	  ->getRepository('ACTESiteBundle:Article')
+	  ->findAll();
 	
   	//VUE DE LA PAGE
   	return $this->render('BUNDLESiteBundle:AdministartionPage:Log/loguser.html.twig', array(
@@ -85,5 +87,6 @@ class LogUserController extends Controller
 		'pages' => $pages,
 		'articles' => $articles,
   		));
+  	...
   }
 }
