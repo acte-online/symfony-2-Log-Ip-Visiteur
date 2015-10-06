@@ -8,7 +8,7 @@ use BUNDLE\SiteBundle\Entity\Loguser;
 use BUNDLE\SiteBundle\Entity\Page;
 use BUNDLE\SiteBundle\Entity\Article;
 
-class LogUserController extends Controller
+class PageController extends Controller
 {
   public function pageAction()
   {
