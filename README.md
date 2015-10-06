@@ -340,7 +340,7 @@ class AdminLogUserController extends Controller
 	$articles = $em->getRepository('BUNDLESiteBundle:Article')->findAll();
 	
   	//VUE DE LA PAGE
-  	return $this->render('BUNDLESiteBundle:AdministrationPage:Log/loguser.html.twig', array(
+  	return $this->render('BUNDLESiteBundle:BackOffice:AdminLogUser.html.twig', array(
   		'logs' => $logs,
 		'pages' => $pages,
 		'articles' => $articles,
