@@ -14,13 +14,13 @@ class AdminLogUserController extends Controller
   	...
   	
 	$em = $this->getDoctrine()->getManager();
-	$logs = $em->getRepository('BIUNDLESiteBundle:Loguser')->findBy(array(), array('id' => 'DESC'));
+	$logs = $em->getRepository('BUNDLESiteBundle:Loguser')->findBy(array(), array('id' => 'DESC'));
 	
 	$em = $this->getDoctrine()->getManager();
-	$pages = $em->getRepository('ACTESiteBundle:Page')->findAll();
+	$pages = $em->getRepository('BUNDLESiteBundle:Page')->findAll();
 	
 	$em = $this->getDoctrine()->getManager();
-	$articles = $em->getRepository('ACTESiteBundle:Article')->findAll();
+	$articles = $em->getRepository('BUNDLESiteBundle:Article')->findAll();
 	
   	//VUE DE LA PAGE
   	return $this->render('BUNDLESiteBundle:AdministrationPage:Log/loguser.html.twig', array(
@@ -28,6 +28,8 @@ class AdminLogUserController extends Controller
 		'pages' => $pages,
 		'articles' => $articles,
   	));
+  	
   	...
+  	
     }
 }
