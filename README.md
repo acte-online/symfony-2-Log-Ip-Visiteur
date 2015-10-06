@@ -358,7 +358,7 @@ class AdminLogUserController extends Controller
 
 ![alt text](https://github.com/acte-online/symfony-2-Log-Ip-Visiteur/blob/master/web/images/AdminLogUser.html.twig.png "Screenshot")
 
-```php
+```html
 ...
 
 {% block body %}
@@ -367,7 +367,7 @@ class AdminLogUserController extends Controller
 	</div>
 	{% for log in logs %}
 		<div class="container-fluid">
-			<div class="col-md-12" style="border-bottom:1px dotted #BABABA;padding:5px 0 10px 0;margin-bottom:10px;">
+			<div class="col-md-12">
 				<div style="float:right;">
 					<a href="" style="color:#FF0000;"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
 				</div>
