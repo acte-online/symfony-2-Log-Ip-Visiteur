@@ -356,7 +356,7 @@ class AdminLogUserController extends Controller
 
 <b>AdminLogUser.html.twig</b>
 
-![image](http://acte-online.com/images/AdminLogUser.html.twig.png)
+![alt text](web/images/AdminLogUser.html.twig.png "Screenshot")
 
 ```php
 ...
