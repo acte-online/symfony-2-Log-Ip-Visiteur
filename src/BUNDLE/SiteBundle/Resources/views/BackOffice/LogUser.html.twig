@@ -1,5 +1,44 @@
 ...
 
-{{ LogUser }}
+{% block body %}
 
-...
+	<div style="padding:0 0 30px 0;">
+		<h3>Administration Log <small>[ adminlog.html.twig ]</small></h3>
+	</div>
+	{% for log in logs %}
+		<div class="container-fluid">
+			<div class="col-md-12" style="border-bottom:1px dotted #BABABA;padding:5px 0 10px 0;margin-bottom:10px;">
+				<div style="float:right;">
+					<a href="" style="color:#FF0000;"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
+				</div>
+				<div>
+					<b>{{ log.id }}</b> - <b>{{ log.dateinsert|date("Y M d") }}</b> <small>à {{ log.dateinsert|date("H:m:s") }}</small> - <b>{{ log.ip }}</b> -> <small><a href="http://www.ip-tracker.org/locator/ip-lookup.php?ip={{ log.ip }}" target="_blank">Whois {{ log.ip }}</a></small>
+				</div>
+				<div style="padding:10px 0 10px 0;">
+					{% for page in pages %}
+						{% if log.page==page.id %}
+						<div style="color:#58FA58"><b>Page :</b> {{ page.pagetitle }}</div>
+						{% endif %}
+					{% endfor %}
+						{% if log.page=='0' %}
+							<div style="color:#58FA58"><b>Page :</b> Accueil</div>
+						{% endif %}
+						{% if log.page=='error - 404' %}
+							<div style="color:#FF0000"><b>Page :</b> Error 404</div>
+						{% endif %}
+						{% if log.page=='login' %}
+							<div style="color:#FF8000"><b>Page :</b> Login</div>
+						{% endif %}
+					{% for article in articles %}
+						{% if log.article==article.id %}
+						<div style="color:#58ACFA"><b>Article :</b> {{ article.articletitle }}</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+				<div style="padding:5px 0 10px 0;"><b>URL :</b> <small>{{ log.uri }}</small></div>
+				<div style="padding:5px 0 10px 0;"><b>USER Agent :</b> <small>{{ log.useragent }}</small></div>
+			</div>
+		</div>
+	{% endfor %}
+	
+{% endblock %}
